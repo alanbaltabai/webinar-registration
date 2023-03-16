@@ -1,6 +1,14 @@
 import mainPic from '../assets/mainPic.svg';
 
 export default function CTA() {
+	function smoothScroll() {
+		console.log('g');
+
+		document.querySelector('#formSection')!.scrollIntoView({
+			behavior: 'smooth',
+		});
+	}
+
 	return (
 		<article className='cta wrapper'>
 			<section>
@@ -10,7 +18,9 @@ export default function CTA() {
 					составил 8 инструментов которые помогут тебе поступить в эти школы и
 					расскажу о них тебе на этом вебинаре, бесплатно! 🫰
 				</p>
-				<a href='#formSection'>Зарегистрироваться</a>
+				<a /* href='#formSection' */ onClick={smoothScroll}>
+					Зарегистрироваться
+				</a>
 			</section>
 
 			<img
