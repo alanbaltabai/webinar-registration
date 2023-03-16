@@ -194,13 +194,6 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-	-webkit-appearance: button;
-}
-
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -227,10 +220,6 @@ button:-moz-focusring,
 /**
  * Correct the padding in Firefox.
  */
-
-fieldset {
-	padding: 0.35em 0.75em 0.625em;
-}
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -290,7 +279,6 @@ textarea {
  */
 
 [type='search'] {
-	-webkit-appearance: textfield; /* 1 */
 	outline-offset: -2px; /* 2 */
 }
 

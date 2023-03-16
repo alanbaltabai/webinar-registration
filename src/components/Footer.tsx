@@ -7,16 +7,24 @@ export default function Footer() {
 	return (
 		<footer className='wrapper'>
 			<a href='#'>
-				<img src={whIcon} alt='ссылка на WhatsApp чат' />
+				<img src={whIcon} alt='ссылка на WhatsApp чат' loading='lazy' />
 			</a>
 			<a href='#'>
-				<img src={instaIcon} alt='ссылка на Instagram страницу' />
+				<img
+					src={instaIcon}
+					alt='ссылка на Instagram страницу'
+					loading='lazy'
+				/>
 			</a>
 			<a href='#'>
-				<img src={telegramIcon} alt='ссылка на Telegram группу' />
+				<img
+					src={telegramIcon}
+					alt='ссылка на Telegram группу'
+					loading='lazy'
+				/>
 			</a>
 			<a href='#'>
-				<img src={zoomIcon} alt='ссылка на Zoom' />
+				<img src={zoomIcon} alt='ссылка на Zoom' loading='lazy' />
 			</a>
 		</footer>
 	);

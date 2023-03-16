@@ -9,10 +9,12 @@ export default function Author() {
 				className='smallImage'
 				src={haqnazar}
 				alt='Ведущий вебинара смотрит задумчиво в сторону с мыслями о своих учениках'
+				loading='lazy'
 			/>
 			<img
 				src={haqnazarLarge}
 				alt='Ведущий вебинара смотрит задумчиво в сторону с мыслями о своих учениках'
+				loading='lazy'
 			/>
 			<div>
 				<section>
