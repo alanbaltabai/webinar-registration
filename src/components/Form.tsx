@@ -17,7 +17,7 @@ export default function Form() {
 			<form id='form' onSubmit={handleSubmit}>
 				<fieldset form='form'>
 					<label htmlFor='name'>Имя</label>
-					<input type='text' name='' id='name' />
+					<input type='text' name='' id='name' spellCheck='false' />
 
 					<label htmlFor='name'>Электронная почта</label>
 					<input type='email' name='' id='name' />

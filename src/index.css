@@ -109,6 +109,8 @@ header h1::after {
 }
 
 .cta a {
+	cursor: pointer;
+
 	background-color: var(--btn-color);
 
 	font-size: 1rem;
@@ -260,7 +262,12 @@ input {
 	background-color: transparent;
 
 	border: none;
+	border-radius: 0;
 	border-bottom: 0.0625em solid var(--aux-font-color2);
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 
 	margin-block-start: 1em;
 	margin-block-end: 1.5em;

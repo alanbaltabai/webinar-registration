@@ -349,3 +349,14 @@ template {
 [hidden] {
 	display: none;
 }
+
+element {
+	border: none;
+
+	background-image: none;
+	background-color: none;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
