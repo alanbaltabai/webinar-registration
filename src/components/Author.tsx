@@ -1,5 +1,5 @@
-import haqnazar from '../assets/haqnazar.jpg';
 import haqnazarLarge from '../assets/haqnazar-large.jpg';
+import haqnazar from '../assets/haqnazar.jpg';
 import longTrail from '../assets/long-trail.svg';
 
 export default function Author() {
@@ -10,11 +10,13 @@ export default function Author() {
 				src={haqnazar}
 				alt='Ведущий вебинара смотрит задумчиво в сторону с мыслями о своих учениках'
 				loading='lazy'
+				decoding='async'
 			/>
 			<img
 				src={haqnazarLarge}
 				alt='Ведущий вебинара смотрит задумчиво в сторону с мыслями о своих учениках'
 				loading='lazy'
+				decoding='async'
 			/>
 			<div>
 				<section>
