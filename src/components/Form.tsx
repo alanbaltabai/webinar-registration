@@ -1,14 +1,13 @@
-import { FormEvent } from 'react';
+import { FormEvent, forwardRef } from 'react';
 
-export default function Form() {
+// first type argument is a ref
+export default forwardRef<HTMLElement>(function Form(props, ref) {
 	function handleSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
-
-		console.log('Qabildadim');
 	}
 
 	return (
-		<article className='formSection wrapper' id='formSection'>
+		<article className='formSection wrapper' id='formSection' ref={ref}>
 			<header>Запишись на вебинар!</header>
 			<p>
 				И получи бесплатный гайд “5 способов не стрессовать перед экзаменом” 💜
@@ -27,4 +26,4 @@ export default function Form() {
 			</form>
 		</article>
 	);
-}
+});

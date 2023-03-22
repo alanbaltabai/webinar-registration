@@ -1,12 +1,17 @@
+import { RefObject } from 'react';
 import mainPic from '../assets/mainPic.svg';
 
-export default function CTA() {
-	function smoothScroll() {
-		console.log('g');
+interface CTAProps {
+	formRef: RefObject<HTMLElement>;
+}
 
-		document.querySelector('#formSection')!.scrollIntoView({
-			behavior: 'smooth',
-		});
+export default function CTA(props: CTAProps) {
+	function smoothScroll() {
+		if (props.formRef.current) {
+			props.formRef.current.scrollIntoView({
+				behavior: 'smooth',
+			});
+		}
 	}
 
 	return (
@@ -18,9 +23,7 @@ export default function CTA() {
 					составил 8 инструментов которые помогут тебе поступить в эти школы и
 					расскажу о них тебе на этом вебинаре, бесплатно! 🫰
 				</p>
-				<a /* href='#formSection' */ onClick={smoothScroll}>
-					Зарегистрироваться
-				</a>
+				<a onClick={smoothScroll}>Зарегистрироваться</a>
 			</section>
 
 			<img

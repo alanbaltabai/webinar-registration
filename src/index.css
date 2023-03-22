@@ -507,8 +507,8 @@ footer img {
 		margin-inline: auto;
 	}
 
-	.details .card:hover {
-		transform: translateY(-6%);
+	.details .card:not(.card:last-child):hover {
+		transform: translateY(-4.5%);
 	}
 
 	.about section {
