@@ -428,9 +428,6 @@ footer img {
 	header h1::after {
 		margin-block-start: 0.6em;
 		margin-inline-start: 0.2em;
-
-		width: 3em;
-		height: 2em;
 	}
 
 	.cta a {
@@ -626,6 +623,12 @@ footer img {
 @media (min-width: 1300px) {
 	:root {
 		font-size: 20px;
+	}
+
+	header h1::after {
+		width: 35px;
+		height: 29px;
+		background-size: 35px 29px;
 	}
 
 	.details .cards {
