@@ -15,7 +15,7 @@
 body {
 	--main-bg-color: #fdfcff;
 	--aux-bg-color: #36205f;
-	--card-bg-color: #ece1ff;
+	--card-bg-color: #f7f2ff;
 
 	--main-font-color: #13062b;
 	--aux-font-color: #4e3f69;
@@ -35,16 +35,16 @@ body {
 }
 
 body.dark {
-	--main-bg-color: #0b031b;
+	--main-bg-color: #222226;
 	--aux-bg-color: #36205f;
-	--card-bg-color: #ece1ff;
+	--card-bg-color: #333336;
 
-	--main-font-color: #f3edfe;
-	--aux-font-color: #4e3f69;
+	--main-font-color: #e9e9e9;
+	--aux-font-color: #13062b;
 	--aux-font-color2: #9993a6;
 
-	--btn-color: #72c4fe;
-	--btn-hover-color: #86cbfc;
+	--btn-color: #606061;
+	--btn-hover-color: #5d5d5f;
 	--btn-hover-color2: #42188f;
 }
 
@@ -123,6 +123,10 @@ header h1::after {
 	margin-inline-start: 0.15em;
 }
 
+.dark header h1::after {
+	background-image: url('./assets/short-trail-white.svg');
+}
+
 .cta {
 	margin-block-start: 2em;
 }
@@ -140,16 +144,28 @@ header h1::after {
 	padding-inline: 2.5em;
 }
 
+.dark .cta section {
+	background-color: var(--card-bg-color);
+}
+
 .cta header {
 	display: none;
 
 	color: var(--main-bg-color);
 }
 
+.dark .cta header {
+	color: var(--main-font-color);
+}
+
 .cta p {
 	line-height: 1.75;
 
 	color: var(--main-bg-color);
+}
+
+.dark .cta p {
+	color: var(--main-font-color);
 }
 
 .cta button {
@@ -164,6 +180,11 @@ header h1::after {
 	margin-block-start: 1.2em;
 }
 
+.dark .cta button,
+.dark form button {
+	background-color: var(--btn-color);
+}
+
 .cta button,
 form button {
 	font-weight: 500;
@@ -173,7 +194,11 @@ form button {
 }
 
 .cta button:hover,
-.cta button:focus {
+.cta button:focus,
+.dark .cta button:hover,
+.dark .cta button:focus,
+.dark form button:hover,
+.dark form button:focus {
 	background-color: var(--btn-hover-color);
 }
 
@@ -231,6 +256,12 @@ form button {
 	line-height: 1;
 }
 
+.dark .details .card header {
+	background-color: var(--main-bg-color);
+
+	color: var(--main-font-color);
+}
+
 .details .card p {
 	line-height: 1.75;
 
@@ -263,6 +294,10 @@ form button {
 	font-weight: 600;
 }
 
+.dark .about header {
+	color: var(--aux-font-color);
+}
+
 .about section p {
 	text-align: left;
 
@@ -271,6 +306,10 @@ form button {
 	margin-block-start: 0.8em;
 
 	line-height: 1.75;
+}
+
+.dark .about section p {
+	color: var(--aux-font-color);
 }
 
 .formSection {
@@ -288,6 +327,10 @@ form button {
 	color: var(--aux-font-color);
 
 	margin-block-start: 0.8em;
+}
+
+.dark .formSection p {
+	color: var(--main-font-color);
 }
 
 .formSection form {
@@ -342,6 +385,10 @@ form button {
 	color: var(--main-bg-color);
 
 	margin-block-start: 0.8em;
+}
+
+.dark form button {
+	color: var(--main-font-color);
 }
 
 form button:hover,
@@ -536,6 +583,10 @@ footer img {
 		border-left: 0.75em solid var(--aux-bg-color);
 	}
 
+	.dark .formSection {
+		border-left: 0.75em solid var(--btn-color);
+	}
+
 	footer {
 		justify-content: end;
 	}
@@ -561,7 +612,7 @@ footer img {
 	}
 
 	.details .card:not(.card:last-child):hover {
-		transform: translateY(-4.5%);
+		transform: translateY(-4%);
 	}
 
 	.about section {

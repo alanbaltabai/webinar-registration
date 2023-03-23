@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -6,7 +6,7 @@ import Main from './components/Main';
 import Toggler from './components/Toggler';
 
 export default function App() {
-	const body = document.body;
+	const body = useRef(document.body);
 	const [isDark, setIsDark] = useState(false);
 
 	function toggle(): void {
@@ -14,7 +14,7 @@ export default function App() {
 	}
 
 	useEffect(() => {
-		body.classList.toggle('dark');
+		body.current.classList.toggle('dark');
 	}, [isDark]);
 
 	return (
