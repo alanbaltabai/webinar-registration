@@ -35,7 +35,7 @@ body {
 }
 
 body.dark {
-	--main-bg-color: #13062b;
+	--main-bg-color: #0b031b;
 	--aux-bg-color: #36205f;
 	--card-bg-color: #ece1ff;
 
@@ -46,9 +46,6 @@ body.dark {
 	--btn-color: #72c4fe;
 	--btn-hover-color: #86cbfc;
 	--btn-hover-color2: #42188f;
-}
-
-body.dark aside svg {
 }
 
 img {
@@ -65,19 +62,30 @@ a {
 	text-decoration: none;
 }
 
-aside svg {
-	cursor: pointer;
+aside button {
+	background-color: transparent;
 
+	border: none;
+}
+
+aside button:first-child {
+	display: none;
+}
+
+.dark aside button:first-child {
+	display: inline;
+}
+
+.dark aside button:last-child {
+	display: none;
+}
+
+aside svg {
 	fill: var(--main-font-color);
 
 	width: 1.5em;
-}
 
-aside svg:first-child {
-}
-
-aside svg:last-child {
-	display: none;
+	display: block;
 }
 
 header {
@@ -144,7 +152,7 @@ header h1::after {
 	color: var(--main-bg-color);
 }
 
-.cta a {
+.cta button {
 	cursor: pointer;
 
 	background-color: var(--btn-color);
@@ -156,7 +164,7 @@ header h1::after {
 	margin-block-start: 1.2em;
 }
 
-.cta a,
+.cta button,
 form button {
 	font-weight: 500;
 
@@ -164,7 +172,8 @@ form button {
 	border-radius: 1.875em;
 }
 
-.cta a:hover {
+.cta button:hover,
+.cta button:focus {
 	background-color: var(--btn-hover-color);
 }
 
@@ -335,7 +344,8 @@ form button {
 	margin-block-start: 0.8em;
 }
 
-form button:hover {
+form button:hover,
+form button:focus {
 	background-color: var(--btn-hover-color2);
 }
 
@@ -352,7 +362,7 @@ footer img {
 }
 
 @media (max-width: 300px) {
-	.cta a {
+	.cta button {
 		display: none;
 	}
 }
@@ -378,13 +388,13 @@ footer img {
 		position: relative;
 	}
 
-	aside svg {
+	aside button /* svg */ {
 		position: absolute;
 		top: 0;
 		right: 0;
 	}
 
-	.cta a {
+	.cta button {
 		margin-block-start: 1em;
 
 		padding-inline: 3em;
@@ -476,7 +486,7 @@ footer img {
 		margin-inline-start: 0.2em;
 	}
 
-	.cta a {
+	.cta button {
 		margin-block-start: 1.4em;
 	}
 
@@ -614,7 +624,7 @@ footer img {
 		border-bottom-right-radius: 0;
 	}
 
-	.cta a {
+	.cta button {
 		margin-block-start: 0;
 
 		align-self: start;
