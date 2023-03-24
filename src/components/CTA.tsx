@@ -1,4 +1,5 @@
 import { RefObject } from 'react';
+
 import mainPic from '../assets/mainPic.svg';
 
 interface CTAProps {
@@ -6,11 +7,16 @@ interface CTAProps {
 }
 
 export default function CTA(props: CTAProps) {
-	function smoothScroll() {
+	function scrollToForm() {
 		if (props.formRef.current) {
 			props.formRef.current.scrollIntoView({
 				behavior: 'smooth',
 			});
+
+			const nameInput = props.formRef.current.children[2].children[0]
+				.children[1] as HTMLInputElement;
+
+			nameInput.focus();
 		}
 	}
 
@@ -23,7 +29,7 @@ export default function CTA(props: CTAProps) {
 					составил 8 инструментов которые помогут тебе поступить в эти школы и
 					расскажу о них тебе на этом вебинаре, бесплатно! 🫰
 				</p>
-				<button onClick={smoothScroll}>Зарегистрироваться</button>
+				<button onClick={scrollToForm}>Зарегистрироваться</button>
 			</section>
 
 			<img

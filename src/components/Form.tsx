@@ -1,6 +1,8 @@
 import { FormEvent, forwardRef } from 'react';
 
-// first type argument is a ref
+import Input from '../components/form-components/Input';
+
+// first type argument is a ref type
 export default forwardRef<HTMLElement>(function Form(props, ref) {
 	function handleSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
@@ -16,10 +18,10 @@ export default forwardRef<HTMLElement>(function Form(props, ref) {
 			<form id='form' onSubmit={handleSubmit}>
 				<fieldset form='form'>
 					<label htmlFor='name'>Имя</label>
-					<input type='text' name='' id='name' spellCheck='false' />
+					<Input type='text' id='name' spellCheck='false'></Input>
 
-					<label htmlFor='name'>Электронная почта</label>
-					<input type='email' name='' id='name' />
+					<label htmlFor='email'>Электронная почта</label>
+					<Input type='email' id='email'></Input>
 
 					<button>Зарегистрироваться</button>
 				</fieldset>

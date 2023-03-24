@@ -294,10 +294,6 @@ form button {
 	font-weight: 600;
 }
 
-.dark .about header {
-	color: var(--aux-font-color);
-}
-
 .about section p {
 	text-align: left;
 
@@ -306,10 +302,6 @@ form button {
 	margin-block-start: 0.8em;
 
 	line-height: 1.75;
-}
-
-.dark .about section p {
-	color: var(--aux-font-color);
 }
 
 .formSection {
@@ -349,26 +341,33 @@ fieldset {
 input {
 	background-color: transparent;
 
+	font-size: 1rem;
+
 	border: none;
-	border-radius: 0;
 	border-bottom: 0.0625em solid var(--aux-font-color2);
 
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 
-	margin-block-start: 1em;
-	margin-block-end: 1.5em;
-
 	outline: none;
 
-	font-size: 1rem;
+	margin-block-start: 1em;
+	margin-block-end: 1.5em;
 
 	padding-block: 0.1em;
 }
 
+.dark input {
+	border-bottom: 0.0625em solid var(--aux-font-color2);
+}
+
 input:focus {
 	border-bottom: 0.0625em solid var(--aux-bg-color);
+}
+
+.dark input:focus {
+	border-bottom: 0.0625em solid var(--main-font-color);
 }
 
 label {
@@ -486,6 +485,14 @@ footer img {
 	.formSection,
 	footer {
 		margin-block-start: 3.5em;
+	}
+
+	.dark .about header {
+		color: var(--aux-font-color);
+	}
+
+	.dark .about section p {
+		color: var(--aux-font-color);
 	}
 
 	.about img:nth-of-type(2) {
