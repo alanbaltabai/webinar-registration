@@ -31,7 +31,12 @@ export default function Footer() {
 				/>
 			</a>
 			<a href='#'>
-				<img src={zoomIcon} alt='ссылка на Zoom' loading='lazy' />
+				<img
+					src={zoomIcon}
+					alt='ссылка на Zoom'
+					loading='lazy'
+					decoding='async'
+				/>
 			</a>
 		</footer>
 	);

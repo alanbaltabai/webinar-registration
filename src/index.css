@@ -12,6 +12,10 @@
 	color: var(--main-font-color);
 }
 
+:root {
+	color-scheme: light dark;
+}
+
 body {
 	--main-bg-color: #fdfcff;
 	--aux-bg-color: #36205f;
@@ -30,8 +34,6 @@ body {
 	margin: 1.25em;
 
 	text-align: center;
-
-	transition: 0.2s;
 }
 
 body.dark {
@@ -40,6 +42,7 @@ body.dark {
 	--card-bg-color: #333336;
 
 	--main-font-color: #e9e9e9;
+	--input-border-color: #b3b2b2;
 	--aux-font-color: #13062b;
 	--aux-font-color2: #9993a6;
 
@@ -359,7 +362,7 @@ input {
 }
 
 .dark input {
-	border-bottom: 0.0625em solid var(--aux-font-color2);
+	border-bottom: 0.0625em solid var(--input-border-color);
 }
 
 input:focus {
