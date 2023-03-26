@@ -11,18 +11,16 @@ export default function App() {
 		localStorage.getItem('darkMode') || 'disabled'
 	);
 
-	function enableDarkModeWithTransition(): void {
+	function enableDarkMode(): void {
 		localStorage.setItem('darkMode', 'enabled');
 
 		body.current.classList.add('dark');
-		// body.current.style.transition = '0.2s';
 	}
 
-	function disableDarkModeWithTransition(): void {
+	function disableDarkMode(): void {
 		localStorage.setItem('darkMode', 'disabled');
 
 		body.current.classList.remove('dark');
-		// body.current.style.transition = '0.2s';
 	}
 
 	function toggle(): void {
@@ -30,11 +28,8 @@ export default function App() {
 	}
 
 	useEffect(() => {
-		if (darkMode === 'enabled') {
-			enableDarkModeWithTransition();
-		} else {
-			disableDarkModeWithTransition();
-		}
+		if (darkMode === 'enabled') enableDarkMode();
+		else disableDarkMode();
 	}, [darkMode]);
 
 	return (

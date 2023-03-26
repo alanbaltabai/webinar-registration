@@ -243,6 +243,8 @@ form button {
 	font-weight: 500;
 
 	background-color: transparent;
+
+	line-height: 1.75;
 }
 
 .details .card header {
@@ -363,6 +365,10 @@ input {
 
 .dark input {
 	border-bottom: 0.0625em solid var(--input-border-color);
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 input:focus {
