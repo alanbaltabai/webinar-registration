@@ -351,11 +351,10 @@ input {
 	border: none;
 	border-bottom: 0.0625em solid var(--aux-font-color2);
 
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-
 	outline: none;
+
+	appearance: none;
+	-webkit-appearance: none;
 
 	margin-block-start: 1em;
 	margin-block-end: 1.5em;
@@ -365,10 +364,6 @@ input {
 
 .dark input {
 	border-bottom: 0.0625em solid var(--input-border-color);
-
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
 }
 
 input:focus {
