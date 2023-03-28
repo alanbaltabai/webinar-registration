@@ -51,18 +51,25 @@ body.dark {
 	--btn-hover-color2: #42188f;
 }
 
-img {
-	max-width: 100%;
-
-	display: block;
+a {
+	text-decoration: none;
 }
 
 button {
 	cursor: pointer;
 }
 
-a {
-	text-decoration: none;
+img {
+	max-width: 100%;
+
+	display: block;
+}
+
+input {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+
+	outline-offset: 0;
 }
 
 aside button {
@@ -353,9 +360,6 @@ input {
 
 	outline: none;
 
-	appearance: none;
-	-webkit-appearance: none;
-
 	margin-block-start: 1em;
 	margin-block-end: 1.5em;
 
@@ -409,6 +413,8 @@ footer {
 
 footer img {
 	width: 1.5em;
+
+	aspect-ratio: 1;
 }
 
 @media (max-width: 300px) {
