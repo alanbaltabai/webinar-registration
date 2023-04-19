@@ -8,13 +8,13 @@ import {
 import { Layout } from './components/Layout';
 
 import { First } from './pages/First';
-import { Thankyou } from './pages/Thankyou';
+import { Thankyou, loader as thLoader } from './pages/Thankyou';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path='/' element={<Layout />}>
 			<Route index element={<First />} />
-			<Route path='thankyou' element={<Thankyou />} />
+			<Route path='thankyou' element={<Thankyou />} loader={thLoader} />
 		</Route>
 	)
 );
