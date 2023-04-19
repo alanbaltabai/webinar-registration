@@ -1,43 +1,26 @@
-import { useEffect, useRef, useState } from 'react';
+import {
+	Route,
+	RouterProvider,
+	createBrowserRouter,
+	createRoutesFromElements,
+} from 'react-router-dom';
 
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Main from './components/Main';
-import Toggler from './components/Toggler';
+import { Layout } from './components/Layout';
 
-export default function App() {
-	const body = useRef(document.body);
-	const [darkMode, setDarkMode] = useState(
-		localStorage.getItem('darkMode') || 'disabled'
-	);
+import { First } from './pages/First';
+import { Thankyou } from './pages/Thankyou';
 
-	function enableDarkMode(): void {
-		localStorage.setItem('darkMode', 'enabled');
+const router = createBrowserRouter(
+	createRoutesFromElements(
+		<Route path='/' element={<Layout />}>
+			<Route index element={<First />} />
+			<Route path='thankyou' element={<Thankyou />} />
+		</Route>
+	)
+);
 
-		body.current.classList.add('dark');
-	}
-
-	function disableDarkMode(): void {
-		localStorage.setItem('darkMode', 'disabled');
-
-		body.current.classList.remove('dark');
-	}
-
-	function toggle(): void {
-		setDarkMode((prev) => (prev === 'enabled' ? 'disabled' : 'enabled'));
-	}
-
-	useEffect(() => {
-		if (darkMode === 'enabled') enableDarkMode();
-		else disableDarkMode();
-	}, [darkMode]);
-
-	return (
-		<>
-			<Toggler toggle={toggle} />
-			<Header />
-			<Main />
-			<Footer />
-		</>
-	);
+function App() {
+	return <RouterProvider router={router} />;
 }
+
+export { App };
