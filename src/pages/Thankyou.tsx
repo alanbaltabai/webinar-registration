@@ -1,9 +1,7 @@
 import { checkAuth } from '../utils';
 
 async function loader() {
-	await checkAuth();
-
-	return null;
+	return await checkAuth();
 }
 
 function Thankyou() {

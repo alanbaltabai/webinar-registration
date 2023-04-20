@@ -1,11 +1,13 @@
 import { redirect } from 'react-router-dom';
 
 async function checkAuth() {
-	const isLoggedIn: boolean = false;
+	const isLoggedIn: boolean = true;
 
 	if (!isLoggedIn) {
-		throw redirect('/');
+		return redirect('/');
 	}
+
+	return null;
 }
 
 export { checkAuth };
