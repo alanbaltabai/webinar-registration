@@ -6,7 +6,7 @@ import zoomIcon from '../assets/zoom-icon.svg';
 export default function Footer() {
 	return (
 		<footer className='wrapper'>
-			<a href='#'>
+			<a href='#wp'>
 				<img
 					src={whIcon}
 					alt='ссылка на WhatsApp чат'
@@ -14,7 +14,7 @@ export default function Footer() {
 					decoding='async'
 				/>
 			</a>
-			<a href='#'>
+			<a href='#ins'>
 				<img
 					src={instaIcon}
 					alt='ссылка на Instagram страницу'
@@ -22,7 +22,7 @@ export default function Footer() {
 					decoding='async'
 				/>
 			</a>
-			<a href='#'>
+			<a href='#tlg'>
 				<img
 					src={telegramIcon}
 					alt='ссылка на Telegram группу'
@@ -30,7 +30,7 @@ export default function Footer() {
 					decoding='async'
 				/>
 			</a>
-			<a href='#'>
+			<a href='#zoom'>
 				<img
 					src={zoomIcon}
 					alt='ссылка на Zoom'

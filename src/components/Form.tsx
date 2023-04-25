@@ -1,9 +1,10 @@
 import { FormEvent, forwardRef } from 'react';
+import { Form } from 'react-router-dom';
 
 import Input from '../components/form-components/Input';
 
 // first type argument is a ref type
-export default forwardRef<HTMLElement>(function Form(props, ref) {
+const ForwardedForm = forwardRef<HTMLElement>(function (props, ref) {
 	function handleSubmit(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
 	}
@@ -15,7 +16,7 @@ export default forwardRef<HTMLElement>(function Form(props, ref) {
 				И получи бесплатный гайд “5 способов не стрессовать перед экзаменом” 💜
 			</p>
 
-			<form id='form' onSubmit={handleSubmit}>
+			<Form id='form'>
 				<fieldset form='form'>
 					<label htmlFor='name'>Имя</label>
 					<Input type='text' id='name' spellCheck='false'></Input>
@@ -25,7 +26,9 @@ export default forwardRef<HTMLElement>(function Form(props, ref) {
 
 					<button>Зарегистрироваться</button>
 				</fieldset>
-			</form>
+			</Form>
 		</article>
 	);
 });
+
+export { ForwardedForm };

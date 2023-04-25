@@ -3,9 +3,9 @@ import { useRef } from 'react';
 import Author from './Author';
 import CTA from './CTA';
 import Details from './Details';
-import Form from './Form';
+import { ForwardedForm } from './Form';
 
-export default function Main() {
+function Main() {
 	const formRef = useRef<HTMLElement | null>(null);
 
 	return (
@@ -13,7 +13,9 @@ export default function Main() {
 			<CTA formRef={formRef} />
 			<Details />
 			<Author />
-			<Form ref={formRef} />
+			<ForwardedForm ref={formRef} />
 		</main>
 	);
 }
+
+export { Main };
