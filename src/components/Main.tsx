@@ -1,13 +1,11 @@
-import { useRef } from 'react';
-
 import Author from './Author';
 import CTA from './CTA';
 import Details from './Details';
 import { ForwardedForm } from './Form';
 
-function Main() {
-	const formRef = useRef<HTMLElement | null>(null);
+import { MainProps } from '../interfaces';
 
+function Main({ formRef }: MainProps) {
 	return (
 		<main>
 			<CTA formRef={formRef} />

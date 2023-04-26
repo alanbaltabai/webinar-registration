@@ -1,14 +1,10 @@
-import { FormEvent, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { Form } from 'react-router-dom';
 
 import Input from '../components/form-components/Input';
 
 // first type argument is a ref type
 const ForwardedForm = forwardRef<HTMLElement>(function (props, ref) {
-	function handleSubmit(event: FormEvent<HTMLFormElement>) {
-		event.preventDefault();
-	}
-
 	return (
 		<article className='formSection wrapper' id='formSection' ref={ref}>
 			<header>Запишись на вебинар!</header>
