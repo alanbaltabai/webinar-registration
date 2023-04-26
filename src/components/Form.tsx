@@ -12,7 +12,7 @@ const ForwardedForm = forwardRef<HTMLElement>(function (props, ref) {
 				И получи бесплатный гайд “5 способов не стрессовать перед экзаменом” 💜
 			</p>
 
-			<Form id='form'>
+			<Form id='form' method='post'>
 				<fieldset form='form'>
 					<label htmlFor='name'>Имя</label>
 					<Input type='text' id='name' spellCheck='false'></Input>

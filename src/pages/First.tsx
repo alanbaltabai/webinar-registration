@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { createRef, useEffect, useRef, useState } from 'react';
 
 import emailjs from '@emailjs/browser';
 
@@ -9,26 +9,22 @@ import Toggler from '../components/Toggler';
 
 import { enableDarkMode, disableDarkMode } from '../utils';
 
-const formRef = useRef<HTMLFormElement>(null);
-
 async function action() {
-	if (formRef.current) {
-		emailjs
-			.sendForm(
-				'YOUR_SERVICE_ID',
-				'YOUR_TEMPLATE_ID',
-				formRef.current,
-				'YOUR_PUBLIC_KEY'
-			)
-			.then(
-				(result) => {
-					console.log(result.text);
-				},
-				(error) => {
-					console.log(error.text);
-				}
-			);
-	}
+	emailjs
+		.sendForm(
+			'service_y9ydwnr',
+			'template_laens46',
+			'#form',
+			'EtIMAfm8sazwK4gkS'
+		)
+		.then(
+			(result) => {
+				console.log(result.text);
+			},
+			(error) => {
+				console.log(error.text);
+			}
+		);
 
 	return null;
 }
@@ -54,7 +50,7 @@ function First() {
 		<>
 			<Toggler toggle={toggle} />
 			<Header />
-			<Main formRef={formRef} />
+			<Main />
 			<Footer />
 		</>
 	);
