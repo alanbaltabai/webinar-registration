@@ -3,9 +3,11 @@ import telegramIcon from '../assets/telegram-icon.svg';
 import whIcon from '../assets/whatsapp-icon.svg';
 import zoomIcon from '../assets/zoom-icon.svg';
 
-export default function Footer() {
+function Footer(props: FooterProps) {
 	return (
-		<footer className='wrapper'>
+		<footer
+			className={`wrapper ${props.pathname === '/thankyou' && 'ty-footer'}`}
+		>
 			<a href='#wp'>
 				<img
 					src={whIcon}
@@ -41,3 +43,5 @@ export default function Footer() {
 		</footer>
 	);
 }
+
+export { Footer };

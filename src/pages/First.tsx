@@ -1,32 +1,17 @@
-import { createRef, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { redirect } from 'react-router-dom';
 
-import emailjs from '@emailjs/browser';
-
-import Footer from '../components/Footer';
+import { Footer } from '../components/Footer';
 import Header from '../components/Header';
 import { Main } from '../components/Main';
 import Toggler from '../components/Toggler';
 
-import { enableDarkMode, disableDarkMode } from '../utils';
+import { enableDarkMode, disableDarkMode, sendEmail } from '../utils';
 
 async function action() {
-	emailjs
-		.sendForm(
-			'service_y9ydwnr',
-			'template_laens46',
-			'#form',
-			'EtIMAfm8sazwK4gkS'
-		)
-		.then(
-			(result) => {
-				console.log(result.text);
-			},
-			(error) => {
-				console.log(error.text);
-			}
-		);
+	// await sendEmail();
 
-	return null;
+	return redirect('/thankyou');
 }
 
 function First() {
@@ -51,7 +36,7 @@ function First() {
 			<Toggler toggle={toggle} />
 			<Header />
 			<Main />
-			<Footer />
+			<Footer pathname={''} />
 		</>
 	);
 }

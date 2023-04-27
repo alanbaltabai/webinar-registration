@@ -1,1 +1,3 @@
-
+interface FooterProps {
+	pathname: string;
+}
