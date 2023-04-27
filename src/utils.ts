@@ -43,4 +43,6 @@ async function sendEmail() {
 		);
 }
 
-export { checkAuth, enableDarkMode, disableDarkMode, sendEmail };
+function validateForm() {}
+
+export { checkAuth, enableDarkMode, disableDarkMode, sendEmail, validateForm };

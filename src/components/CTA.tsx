@@ -1,10 +1,5 @@
-import { RefObject } from 'react';
-
 import mainPic from '../assets/mainPic.svg';
-
-interface CTAProps {
-	formRef: RefObject<HTMLElement>;
-}
+import { CTAProps } from '../interfaces';
 
 export default function CTA(props: CTAProps) {
 	function scrollToForm() {

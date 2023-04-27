@@ -1,6 +1,4 @@
-interface TogglerProps {
-	toggle(): void;
-}
+import { TogglerProps } from '../interfaces';
 
 export default function Toggler(props: TogglerProps) {
 	return (

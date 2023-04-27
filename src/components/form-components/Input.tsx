@@ -1,18 +1,35 @@
-interface InputProps {
-	type: string;
-	id?: string;
-	spellCheck?: boolean | 'true' | 'false';
-}
+import { InputProps } from '../../interfaces';
 
-export default function Input(props: InputProps) {
+function Input(props: InputProps) {
 	switch (props.type) {
 		case 'text':
-			return <input type='text' id='name' name='username' spellCheck='false' />;
+			return (
+				<input
+					type='text'
+					id='name'
+					name='username'
+					spellCheck='false'
+					// required
+					autoComplete='off'
+				/>
+			);
 
 		case 'email':
-			return <input type='email' id='email' name='email' />;
+			return (
+				<input
+					type='email'
+					id='email'
+					name='email'
+					required
+					title='Введи существующую почту'
+					autoComplete='off'
+					pattern='[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}'
+				/>
+			);
 
 		default:
 			return <input type='text' />;
 	}
 }
+
+export { Input };

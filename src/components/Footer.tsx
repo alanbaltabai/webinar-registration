@@ -2,6 +2,7 @@ import instaIcon from '../assets/instagram-icon.svg';
 import telegramIcon from '../assets/telegram-icon.svg';
 import whIcon from '../assets/whatsapp-icon.svg';
 import zoomIcon from '../assets/zoom-icon.svg';
+import { FooterProps } from '../interfaces';
 
 function Footer(props: FooterProps) {
 	return (

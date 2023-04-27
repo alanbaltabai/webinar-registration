@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import { Form } from 'react-router-dom';
 
-import Input from '../components/form-components/Input';
+import { Input } from '../components/form-components/Input';
 
 // first type argument is a ref type
 const ForwardedForm = forwardRef<HTMLElement>(function (props, ref) {
