@@ -203,11 +203,12 @@ form button {
 	border-radius: 1.875em;
 }
 
-.cta button:hover,
+form button:focus {
+	background-color: var(--btn-hover-color2);
+}
+
 .cta button:focus,
-.dark .cta button:hover,
 .dark .cta button:focus,
-.dark form button:hover,
 .dark form button:focus {
 	background-color: var(--btn-hover-color);
 }
@@ -396,11 +397,6 @@ form button {
 
 .dark form button {
 	color: var(--main-font-color);
-}
-
-form button:hover,
-form button:focus {
-	background-color: var(--btn-hover-color2);
 }
 
 footer {
@@ -649,10 +645,6 @@ footer img {
 		margin-inline: auto;
 	}
 
-	.details .card:not(.card:last-child):hover {
-		transform: translateY(-4%);
-	}
-
 	.about section {
 		max-width: 35%;
 	}
@@ -792,5 +784,21 @@ footer img {
 
 	.ty-main {
 		max-width: 60%;
+	}
+}
+
+@media (hover: hover) {
+	.cta button:hover,
+	.dark .cta button:hover,
+	.dark form button:hover {
+		background-color: var(--btn-hover-color);
+	}
+
+	form button:hover {
+		background-color: var(--btn-hover-color2);
+	}
+
+	.details .card:not(.card:last-child):hover {
+		transform: translateY(-4%);
 	}
 }
