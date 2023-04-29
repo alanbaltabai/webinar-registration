@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ActionFunctionArgs, redirect } from 'react-router-dom';
+import { redirect } from 'react-router-dom';
 
 import { Footer } from '../components/Footer';
 import Header from '../components/Header';
@@ -8,17 +8,10 @@ import Toggler from '../components/Toggler';
 
 import { enableDarkMode, disableDarkMode, sendEmail } from '../utils';
 
-async function action({ request }: ActionFunctionArgs) {
-	const formData = await request.formData();
-	const username = formData.get('username');
-	const email = formData.get('email');
-
-	console.log(username, email);
-	// await sendEmail();
+async function action() {
+	await sendEmail();
 
 	return redirect('/thankyou');
-
-	return null;
 }
 
 function First() {

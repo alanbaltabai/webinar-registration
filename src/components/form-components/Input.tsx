@@ -9,7 +9,7 @@ function Input(props: InputProps) {
 					id='name'
 					name='username'
 					spellCheck='false'
-					// required
+					required
 					autoComplete='off'
 				/>
 			);
