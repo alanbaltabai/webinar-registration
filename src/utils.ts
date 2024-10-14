@@ -1,48 +1,41 @@
-import { MutableRefObject } from 'react';
-import { redirect } from 'react-router-dom';
+import { FormEvent, MutableRefObject } from "react";
+import { redirect } from "react-router-dom";
 
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 async function checkAuth() {
-	const isLoggedIn: boolean = true;
+  const isLoggedIn: boolean = true;
 
-	if (!isLoggedIn) {
-		return redirect('/');
-	}
-
-	return null;
+  return !isLoggedIn ? redirect("/") : null;
 }
 
 function enableDarkMode(element: MutableRefObject<HTMLElement>): void {
-	localStorage.setItem('darkMode', 'enabled');
+  localStorage.setItem("darkMode", "enabled");
 
-	element.current.classList.add('dark');
+  element.current.classList.add("dark");
 }
 
 function disableDarkMode(element: MutableRefObject<HTMLElement>): void {
-	localStorage.setItem('darkMode', 'disabled');
+  localStorage.setItem("darkMode", "disabled");
 
-	element.current.classList.remove('dark');
+  element.current.classList.remove("dark");
 }
 
-async function sendEmail() {
-	emailjs
-		.sendForm(
-			'service_y9ydwnr',
-			'template_laens46',
-			'#form',
-			'EtIMAfm8sazwK4gkS'
-		)
-		.then(
-			() => {},
-			() => {
-				throw new Error(
-					'Упс.. Возникла проблема с отправкой письма, попробуй еще раз?'
-				);
-			}
-		);
+async function sendEmail(event: FormEvent) {
+  event.preventDefault();
+
+  emailjs
+    .sendForm("service_y9ydwnr", "template_laens46", "#form", {
+      publicKey: "EtIMAfm8sazwK4gkS",
+    })
+    .then(
+      () => {},
+      () => {
+        throw new Error(
+          "Упс.. Возникла проблема с отправкой письма, попробуй еще раз?"
+        );
+      }
+    );
 }
 
-function validateForm() {}
-
-export { checkAuth, enableDarkMode, disableDarkMode, sendEmail, validateForm };
+export { checkAuth, enableDarkMode, disableDarkMode, sendEmail };
